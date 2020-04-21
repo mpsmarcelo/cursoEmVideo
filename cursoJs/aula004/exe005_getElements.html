@@ -1,0 +1,59 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get elementos</title>
+    <style>
+
+        body {
+            background: rgb(158, 185, 147);
+            color :white;
+            font: normal 14px Arial;
+            }
+        body h1 {
+            background: rgb(68,125, 199);
+            color :white;
+            font: normal 14px Arial;
+            }
+    
+    </style>
+</head>
+<body>
+        
+<h1>Aprendendo java Script</h1>
+<h1>Resultado: </h1>
+<p>P1 - Primeiro paragrafo <strong>DOM</strong></p>
+<p id='p2'>P2 - Segundo paragrafo <strong>DOM</strong></p>
+<p class="row">P3 - Terceiro paragrafo <strong>DOM</strong></p>
+<p id='msg'>P4 - Quarto paragrafo <strong>DOM</strong></p>
+<p>P5 - Quinto paragrafo <strong>DOM</strong></p>
+
+
+<script>
+    
+var p1, p2, p3, p4, p5;
+
+document.write('<br><br><br>');
+//retornando valores de tag por tagnam
+p1 =window.document.getElementsByTagName('p')[0];
+p1.style.color = 'red';
+window.document.write(p1.innerHTML + ', retornou P1 Doon');
+
+p2 = window.document.getElementById('p2');
+window.document.write('<br>'+ p2.innerText + ', retornou P2 Doon');
+
+
+p3 = window.document.getElementsByClassName('row')[0];
+window.document.write(`<br> ${p3.innerText} , retornou P3 Doon`);
+
+
+p4 = window.document.querySelector('p#msg');
+var teste =  p4.innerText;
+window.document.write(`<br> ${teste}    , retornou P4 Doon`)
+</script>
+
+</body>
+</html>

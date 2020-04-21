@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Nacinalidade</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>Verifica nacionalidade</h1>
+         Nacionalidade : <input type="text" name="nac" id="nac" required= "true"> 
+     
+         <input type="button" value="verificar" onclick="verificar()">
+         <input type="button" value="limpar" onclick="limpar()">
+     <div id="resultado"></div>
+
+     <script>
+           function verificar(){
+
+               var nacionalidadeObj = document.querySelector("input#nac")
+               var nacionalidade = nacionalidadeObj.value
+               var res = document.querySelector("div#resultado")
+               res.innerHTML = `Sua nacionalidade é: ${nacionalidade}`
+           }
+
+           function limpar(){
+               var res = document.querySelector("div#resultado")
+               res.innerHTML = '' 
+           }
+     </script>
+   
+</body>
+</body>
+</html>
