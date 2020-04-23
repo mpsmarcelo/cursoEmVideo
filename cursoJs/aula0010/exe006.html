@@ -33,12 +33,24 @@
     </style>
 </head>
 <body>
-    <div id="area">
-            Interagindo
-    </div>
-    <div class="mps">
-            Plasma
-    </div>
+<div  id="area" onclick="onClick()" onmouseenter="onMouseEnter()" onmouseout="onMouseOut()">
+ Interação
+        <script>
+                var interactionMouse = document.getElementById("area")
+                function onClick(){
+                        
+                        interactionMouse.innerHTML = 'Clicou'
+                }
+                function onMouseEnter(){
+                        interactionMouse.innerHTML = 'Entrou'
+                        interactionMouse.style.background =  'green'
 
+                }
+                function onMouseOut(){
+                        interactionMouse.innerHTML = 'Saiu'
+
+                }
+        </script>
+</div>
 </body>
 </html>
