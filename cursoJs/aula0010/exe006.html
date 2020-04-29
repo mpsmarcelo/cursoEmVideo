@@ -38,9 +38,9 @@
         <script>
                 var interactionMouse = document.getElementById("area")
                 
-                interactionMouse.addEventListener("onClick", onclick)
-                interactionMouse.addEventListener("onMouseEnter", onmouseenter)
-                interactionMouse.addEventListener("onMouseOut",onmouseout)
+                interactionMouse.addEventListener("click", onClick)
+                interactionMouse.addEventListener("mouseenter", onMouseEnter)
+                interactionMouse.addEventListener("mouseout",onMouseOut)
                 
                 function onClick(){
                         
@@ -48,7 +48,7 @@
                 }
                 function onMouseEnter(){
                         interactionMouse.innerHTML = 'Entrou'
-                        interactionMouse.style.background =  'green'
+                        interactionMouse.style.background =  'red'
 
                 }
                 function onMouseOut(){
