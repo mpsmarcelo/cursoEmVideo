@@ -33,10 +33,15 @@
     </style>
 </head>
 <body>
-<div  id="area" onclick="onClick()" onmouseenter="onMouseEnter()" onmouseout="onMouseOut()">
+<div  id="area" >
  Interação
         <script>
                 var interactionMouse = document.getElementById("area")
+                
+                interactionMouse.addEventListener("onClick", onclick)
+                interactionMouse.addEventListener("onMouseEnter", onmouseenter)
+                interactionMouse.addEventListener("onMouseOut",onmouseout)
+                
                 function onClick(){
                         
                         interactionMouse.innerHTML = 'Clicou'
