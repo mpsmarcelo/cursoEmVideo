@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Saldo estoque</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>Verifica saldo em estoque</h1>
+    Quantidade requerida : <input type="number" id="qtdRequisicao" name="qtdRequisicao">
+    <input type="button" value="Consultar saldo" onclick="executarSaida()">
+    <div id="resultado"></div>
+    <div id="saldoAtual"></div>
+    <script>
+            function executarSaida(){
+                    var saldo
+                    var saldoAtual =  document.querySelector("div#saldoAtual")
+                    var saida =  document.querySelector("input#qtdRequisicao")
+                    var qtdSaida =  Number(saida.value)
+                    var res =  document.querySelector("div#resultado")
+                    saldo = consutaSaldo(qtdSaida)
+                    saldo >= 0  ?  res.innerHTML = `Retirada efetuada com sucesso, quantidade retirada : <stronger>${qtdSaida}</stronger>` 
+                    : res.innerHTML = `Não foi possível concluir a ação, saldo insuficiente!` 
+                    saldoAtual.innerHTML =  `Saldo atual é : <stronger>${saldo} </stronger>`
+            }
+
+            function consutaSaldo(qtdSaida){    
+                var quantidadeEstoque = 100
+                saldo = Number(quantidadeEstoque) - Number(qtdSaida)
+                return saldo
+            }
+
+    </script>
+
+</body>
+</html>

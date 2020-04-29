@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Digite seu nome : ');
+        var idade = window.prompt('Digite sua idade :');
+        var cidade = window.prompt('Digite cidade onde mora');
+        var salario = Number(window.prompt('Digite seu salário : '));
+        salario = salario.toLocaleString('pt-BR',{style : 'currency', currency : 'BRL'});
+             document.write(`Ola <strong>${nome}</strong>, seu nome possue ${nome.length} letras!<br>`);
+             document.write(`Você tem ${idade} anos e mora em ${cidade} <br>`);
+             document.write(`Seu nome em maiusculo é: ${nome.toUpperCase()} <br>`);
+             document.write(`Seu salário é : ${salario}`);       
+
+    </script>
+</body>
+</html>

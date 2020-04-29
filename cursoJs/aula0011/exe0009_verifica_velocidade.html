@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Dentram</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+     <h1>Verifica velocidade</h1>
+          Velocidade : <input type="number" name="veloc" id="veloc"> km/h 
+      
+          <input type="button" value="verificar" onclick="verificar()">
+          <input type="button" value="limpar" onclick="limpar()">
+      <div id="resultado"></div>
+
+      <script>
+            function verificar(){
+
+                var velocidadeObj = document.querySelector("input#veloc")
+                var velocidade = Number(velocidadeObj.value)
+                var res = document.querySelector("div#resultado")
+                res.innerHTML = `Sua velocidade atual é: ${velocidade}`
+
+                if(velocidade > 60){
+                    res.innerHTML += ', você  foi multado'
+                }else{
+                res.innerHTML += ', você não foi multado'
+                }
+            }
+
+            function limpar(){
+                var res = document.querySelector("div#resultado")
+                res.innerHTML = '' 
+            }
+      </script>
+    
+</body>
+</html>
