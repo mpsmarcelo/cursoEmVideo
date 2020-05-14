@@ -2,6 +2,7 @@ var agora = new Date()
 var diaDaSemana = agora.getDay()
 console.log(`Dia : ${diaDaSemana}`)
 
+
 /*diaDaSemana = 10*/
 
 switch(diaDaSemana){
